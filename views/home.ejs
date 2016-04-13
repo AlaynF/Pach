@@ -1,43 +1,129 @@
-<section class="hero is-medium is-primary is-bold">
-  <div class="hero-content">
-    <div class="container">
-      <h1 class="title">
-        Pach The Rat
-      </h1>
-      <h2 class="subtitle">
+<div ng-controller="home" class="">
+    <section class="hero is-medium is-warning is-bold">
+      <div class="hero-content">
+        <div class="container has-text-centered">
+          <h1 class="title" style="font-family:mousetrap; font-size:90px;line-height: 105px;">
+            PACH THE RAT
+          </h1>
+          <h2 class="subtitle is-3">
+              {{roastheader}}
 
-      </h2>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="content is-centered" padding-left="1000px">
+    <img height="300" width="400" src = "http://rdcnewscdn.realtor.com/wp-content/uploads/2016/03/Pizza-rat-Imgur.gif"  />
+    <img height="300" width="400" src = "http://cdn.smosh.com/sites/default/files/2015/10/halloween-rat-excited-candy.gif"  />
+    <img height="300" width="400" src = "http://gif-finder.com/wp-content/uploads/2015/10/Baby-eating-spaghetti.gif"  />
     </div>
-  </div>
-</section>
-
-<div class="content is-centered" padding-left="1000px">
-<img height="300" width="400" src = "http://rdcnewscdn.realtor.com/wp-content/uploads/2016/03/Pizza-rat-Imgur.gif"  />
-<img height="300" width="400" src = "http://cdn.smosh.com/sites/default/files/2015/10/halloween-rat-excited-candy.gif"  />
-<img height="300" width="400" src = "http://gif-finder.com/wp-content/uploads/2015/10/Baby-eating-spaghetti.gif"  />
-</div>
+    <br> -->
+<br>
+<br>
 <br>
 
 
-  <a class="button is-info">
-    {{rat}}
-  </a>
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+        <div class="tile">
 
 
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-warning" style="font-size:35px">
+                  <p class="title">
+                  </p>
+                  We decided to share the gift that is roasting Ricardo with
+                  the world, so here we are.
+              </article>
+              <article class="tile is-child notification is-warning">
+                <p class="tile" style="font-family:mousetrap;font-size:20px" >A fresh insult every time!.</p>
+                <p width="200px" class="subtitle">
+                    <a style="width:300px" ng-click='showRat()'  class="button is-info is-danger " >
+                      Roast
+                  </a>
+                  <p>
+                    {{roast}}
+                </p>
+                </p>
+                </article>
+            </div>
 
-<footer class="footer">
-  <div class="container">
-    <div class="content is-centered">
-      <p>
-        <strong>PachTheRat</strong> by <a href="http://jgthms.com">The GC</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
-      </p>
-      <p>
-        <a class="icon" href="https://github.com/jgthms/bulma">
-          <i class="fa fa-github"></i>
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
+
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-warning">
+                <p class="title">A daily picture of Ricardo in action.</p>
+                <p class="subtitle">Tuesday: Master Splinter</p>
+                <figure>
+                   <img style="height:300px; width:300px float:right"src="images/splinter.png"/>
+                </figure>
+              </article>
+            </div>
+          </div>
+
+
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p class="title" style="font-family:mousetrap">Follow the Rat on Twitter!</p>
+              <p class="subtitle" style="float:right"><div class="content is-centered" padding-left="1000px">
+              <img height="100" width="120" src = "http://rdcnewscdn.realtor.com/wp-content/uploads/2016/03/Pizza-rat-Imgur.gif"  />
+              <img height="100" width="120" src = "http://cdn.smosh.com/sites/default/files/2015/10/halloween-rat-excited-candy.gif"  />
+              <img height="100" width="120" src = "http://media2.giphy.com/media/3ornjHDjS8z9O4TTgY/giphy.gif"  />
+              <img height="100" width="120" src = "http://media4.giphy.com/media/tambTr0EeZGk8/giphy.gif"  />
+              <img height="100" width="120" src = "http://media4.giphy.com/media/ctoCuhrkNLGkE/giphy.gif"  />
+              <img height="100" width="120" src = "http://media1.giphy.com/media/vrFnQhh5VqsUw/giphy.gif"  />
+              <img height="100" width="120" src = "http://media0.giphy.com/media/UMiaKVYsVQG9W/giphy.gif"  />
+
+              </div>
+          </p>
+                  <a href="https://twitter.com/PachUp_" class="button is-dark">
+                        <span class="icon"><i class="fa fa-twitter"><img src="images/cheese.png"/></i></span>
+                        <span>Twitter</span>
+                        </a></p>
+
+
+              <div class="content">
+                <!-- Content -->
+              </div>
+            </article>
+          </div>
+        </div>
+
+
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-warning">
+            <div style="height:450px width:450px" class="content">
+              <p class="title" style="font-family:mousetrap" >Search GIFS!</p>
+              <p class="subtitle">
+                  <label class="label"></label>
+                  <p class="control has-addons">
+                        <input class="input" ng-model="info.string" type="text" placeholder="1,000,000 Rats run rampid in Lago Grande">
+                        <a ng-click="searchinfo()" class="button is-info">Search</a>
+                    </p>
+            </p>
+              <div style="vertical-align:middle;display:inline-block;margin: 0;height: 150px;" ng-repeat="gif in gifResult">
+                <img src="{{gif.images.original.url}}" width="150px" height="150px"/>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content is-centered">
+          <p>
+            <strong>PachTheRat</strong> by <a href="http://jgthms.com">The GroupChat</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/jgthms/bulma">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+</div>
